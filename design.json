@@ -1,0 +1,147 @@
+{
+  "design_system": {
+    "name": "Minimalist Bento Portfolio",
+    "version": "1.0",
+    "description": "A clean, content-first personal portfolio system featuring high-contrast typography, generous whitespace, and a rounded masonry/bento grid layout.",
+    "visual_philosophy": {
+      "aesthetic": "Minimalist, Modern, Bold",
+      "core_principles": [
+        "Content over chrome",
+        "High contrast typography",
+        "Playful but structured grids (Bento/Masonry)",
+        "Softened geometry (Consistent border-radius)"
+      ]
+    },
+    "tokens": {
+      "colors": {
+        "background": {
+          "primary": "#FFFFFF",
+          "secondary": "#F5F5F7",
+          "card_default": "#F4F4F5"
+        },
+        "text": {
+          "primary": "#000000",
+          "secondary": "#52525B",
+          "tertiary": "#A1A1AA"
+        },
+        "brand_accents": {
+          "instagram": "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)",
+          "linkedin": "#0077B5",
+          "github": "#181717",
+          "strava": "#FC4C02"
+        },
+        "ui": {
+          "border": "rgba(0, 0, 0, 0.08)"
+        }
+      },
+      "typography": {
+        "font_family": {
+          "primary": "'Inter', 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif"
+        },
+        "weights": {
+          "regular": 400,
+          "medium": 500,
+          "bold": 700,
+          "heavy": 800
+        },
+        "hierarchy": {
+          "hero_heading": {
+            "size": "clamp(3rem, 5vw, 4.5rem)",
+            "weight": "800",
+            "line_height": "1.1",
+            "letter_spacing": "-0.03em"
+          },
+          "section_heading": {
+            "size": "clamp(1.5rem, 3vw, 2.5rem)",
+            "weight": "700",
+            "line_height": "1.2",
+            "letter_spacing": "-0.02em"
+          },
+          "body_large": {
+            "size": "1.125rem",
+            "weight": "400",
+            "line_height": "1.6"
+          },
+          "body_default": {
+            "size": "1rem",
+            "weight": "400",
+            "line_height": "1.5"
+          },
+          "caption": {
+            "size": "0.875rem",
+            "weight": "500",
+            "color": "text.secondary",
+            "text_transform": "uppercase",
+            "letter_spacing": "0.05em"
+          }
+        }
+      },
+      "spacing": {
+        "page_gutter": "clamp(1rem, 5vw, 4rem)",
+        "section_vertical": "clamp(4rem, 10vw, 8rem)",
+        "grid_gap": "1rem",
+        "card_padding": "1.5rem"
+      },
+      "shapes": {
+        "border_radius": {
+          "default": "16px",
+          "large": "24px",
+          "button": "9999px",
+          "circle": "50%"
+        }
+      }
+    },
+    "layout": {
+      "container": {
+        "max_width": "1400px",
+        "alignment": "center"
+      },
+      "grid_system": {
+        "type": "CSS Grid / Bento",
+        "columns": {
+          "mobile": "1fr",
+          "tablet": "repeat(2, 1fr)",
+          "desktop": "repeat(4, 1fr)"
+        },
+        "patterns": [
+          "1x1 (Square tile)",
+          "2x1 (Horizontal rectangle)",
+          "2x2 (Large featured tile)",
+          "1x2 (Vertical portrait tile)"
+        ]
+      }
+    },
+    "components": {
+      "hero_section": {
+        "layout": "Split (Text Left/Image Right) or Stacked",
+        "typography": "Heavy bold heading, strictly minimal subtext.",
+        "image_style": "Full bleed or rounded corners depending on width."
+      },
+      "bento_card": {
+        "background": "#F4F4F5",
+        "border_radius": "tokens.shapes.border_radius.default",
+        "content_layout": "Flex column",
+        "media_behavior": "Cover / Object-fit",
+        "hover_state": "Subtle scale (1.02) or dimming"
+      },
+      "social_pill": {
+        "style": "Flex row, aligned center",
+        "background": "White or specific brand color",
+        "border": "1px solid tokens.colors.ui.border",
+        "border_radius": "tokens.shapes.border_radius.default",
+        "padding": "1rem"
+      },
+      "activity_card": {
+        "description": "Strava-style activity summary",
+        "elements": ["Map preview", "Stat number (Bold)", "Stat label (Caption)"],
+        "style": "Floating card on top of map background"
+      }
+    },
+    "replication_rules": {
+      "images": "All images must have border-radius: 16px unless they are full-screen backgrounds. Images inside grids should fill the container (object-fit: cover).",
+      "text_alignment": "Headings are generally left-aligned. Body text is left-aligned.",
+      "whitespace": "Prioritize vertical breathing room. Do not clutter elements. Use whitespace to separate logical sections.",
+      "mobile_adaptation": "On mobile, the Bento grid must collapse into a single vertical column with consistent gap spacing."
+    }
+  }
+}
