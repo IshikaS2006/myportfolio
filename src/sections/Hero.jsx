@@ -47,7 +47,7 @@ function Hero() {
               className="group relative inline-flex items-center gap-2 bg-black text-white rounded-lg px-8 py-2.5 font-medium transition-all duration-300 overflow-hidden hover:shadow-lg"
             >
               {/* Original text - slides up on hover */}
-              <span className="relative flex items-center gap-2 transition-transform duration-300 ease-out group-hover:-translate-y-full">
+              <span className="relative flex items-center gap-2 transition-transform duration-300 ease-out group-hover:-translate-y-[150%]">
                 <span className="text-lg">✉</span>
                 <span className="text-base">ishikasinghmavai2006@gmail.com</span>
               </span>
