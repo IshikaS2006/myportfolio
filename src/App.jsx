@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Hero from './sections/Hero'
 import Projects from './sections/Projects'
 import OpenSource from './sections/OpenSource'
+import TechStack from './components/about/TechStack'
 import About from './pages/About'
 
 function App() {
@@ -72,6 +73,7 @@ function App() {
             <Hero />
             <OpenSource />
             <Projects />
+            <TechStack />
           </>
         ) : (
           <About />

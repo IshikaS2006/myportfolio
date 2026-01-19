@@ -40,28 +40,28 @@ function OpenSource() {
   }, [])
 
   return (
-    <section id="opensource" className="py-24 px-8 bg-white">
+    <section id="opensource" className="py-16 md:py-24 px-4 md:px-8 bg-white">
       <div className="max-w-[1200px] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <div className="mb-6 flex justify-center">
             <img 
               src="/contri/contri.png" 
               alt="Contributions" 
-              className="w-32 h-32 object-contain"
+              className="w-24 h-24 md:w-32 md:h-32 object-contain"
             />
           </div>
-          <h2 className="text-5xl font-semibold text-black mb-4">Open source contributions</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-4 px-4">Open source contributions</h2>
         </div>
 
         {/* Contributions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-[79%] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full md:max-w-[90%] lg:max-w-[79%] mx-auto">
           {contributions.map((contrib, index) => (
-            <div key={index} className="bg-white border border-gray-300 rounded-md p-8 flex flex-col">
+            <div key={index} className="bg-white border border-gray-300 rounded-md p-4 md:p-8 flex flex-col">
               {/* Repo Header */}
-              <div className="flex items-start justify-between mb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 flex items-center justify-center">
+              <div className="flex flex-col sm:flex-row items-start justify-between mb-4 gap-3">
+                <div className="flex items-center gap-2 md:gap-3">
+                  <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center">
                     {contrib.iconType === 'lightning' ? (
                       <svg className="w-8 h-8 text-yellow-500" viewBox="0 0 24 24" fill="currentColor">
                         <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
@@ -72,11 +72,11 @@ function OpenSource() {
                       </svg>
                     )}
                   </div>
-                  <h3 className="text-xl font-semibold text-black">{contrib.name}</h3>
+                  <h3 className="text-base md:text-xl font-semibold text-black">{contrib.name}</h3>
                 </div>
                 <div 
                   onClick={() => window.open(contrib.repoLink, '_blank')}
-                  className="flex items-center gap-1.5 text-sm text-gray-700 bg-gray-50 px-3 py-1.5 rounded-md border border-gray-200 cursor-pointer hover:bg-gray-100 transition-colors"
+                  className="flex items-center gap-1.5 text-xs md:text-sm text-gray-700 bg-gray-50 px-2 md:px-3 py-1 md:py-1.5 rounded-md border border-gray-200 cursor-pointer hover:bg-gray-100 transition-colors flex-shrink-0"
                 >
                   <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 16 16">
                     <path fillRule="evenodd" d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"/>
@@ -87,7 +87,7 @@ function OpenSource() {
               </div>
 
               {/* Description */}
-              <p className="text-gray-600 leading-relaxed mb-6 flex-grow">
+              <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6 flex-grow">
                 {contrib.description}
               </p>
 

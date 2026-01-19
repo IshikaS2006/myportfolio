@@ -11,11 +11,11 @@ function Hero() {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-8 pt-20 bg-white">
+    <section id="home" className="min-h-screen flex items-center justify-center px-4 md:px-8 pt-20 bg-white">
       <div className="max-w-[1200px] w-full">
-        <div className="flex flex-col items-center text-center gap-8">
+        <div className="flex flex-col items-center text-center gap-6 md:gap-8">
           {/* Illustration */}
-          <div className="w-32 h-32 mb-4">
+          <div className="w-24 h-24 md:w-32 md:h-32 mb-2 md:mb-4">
             <img 
               src="/hero/hero-section-img-removebg-preview.png" 
               alt="Hero illustration" 
@@ -26,30 +26,30 @@ function Hero() {
           {/* Main Content */}
           <div className="w-full">
             <h1 
-              className="font-sans text-6xl md:text-7xl font-bold text-black mb-4 tracking-tight"
+              className="font-sans text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 tracking-tight px-4"
               style={{ fontFeatureSettings: '"cv11"' }}
             >
               Hi, I&apos;m Ishika Singh <span className="inline-block animate-wave">👋</span>
             </h1>
             <h2 
-              className="font-sans text-5xl md:text-6xl font-bold text-black mb-6 tracking-tight"
+              className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 tracking-tight"
               style={{ fontFeatureSettings: '"cv11"' }}
             >
               Web Developer
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-base md:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed px-4">
               I&apos;m a web developer based in Delhi, India, focused on building responsive, user-friendly web applications using modern technologies.
             </p>
 
             {/* Contact Button */}
             <button
               onClick={handleCopy}
-              className="group relative inline-flex items-center gap-2 bg-black text-white rounded-lg px-8 py-2.5 font-medium transition-all duration-300 overflow-hidden hover:shadow-lg"
+              className="group relative inline-flex items-center gap-2 bg-black text-white rounded-lg px-4 md:px-8 py-2.5 font-medium transition-all duration-300 overflow-hidden hover:shadow-lg"
             >
               {/* Original text - slides up on hover */}
               <span className="relative flex items-center gap-2 transition-transform duration-300 ease-out group-hover:-translate-y-[150%]">
-                <span className="text-lg">✉</span>
-                <span className="text-base">ishikasinghmavai2006@gmail.com</span>
+                <span className="text-base md:text-lg">✉</span>
+                <span className="text-sm md:text-base">ishikasinghmavai2006@gmail.com</span>
               </span>
               
               {/* Copy text - slides up from below */}

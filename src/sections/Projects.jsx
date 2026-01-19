@@ -21,24 +21,24 @@ function Projects() {
   ]
 
   return (
-    <section id="projects" className="py-24 px-8 bg-white">
-      <div className="max-w-[79%] mx-auto">
+    <section id="projects" className="py-16 md:py-24 px-4 md:px-8 bg-white">
+      <div className="w-full md:max-w-[90%] lg:max-w-[79%] mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12 md:mb-16">
           <div className="mb-6 flex justify-center">
             <img 
               src="/projs.png" 
               alt="Projects" 
-              className="w-32 h-32 object-contain"
+              className="w-24 h-24 md:w-32 md:h-32 object-contain"
             />
           </div>
-          <h2 className="text-5xl font-semibold text-black mb-4">Projects & Works</h2>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black mb-4 px-4">Projects & Works</h2>
         </div>
 
         {/* Projects List */}
-        <div className="space-y-16">
+        <div className="space-y-12 md:space-y-16">
           {projects.map((project, index) => (
-            <div key={index} className="flex flex-col md:flex-row gap-8 items-start">
+            <div key={index} className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
               {/* Project Image */}
               <div className="md:w-1/2">
                 <div className="rounded-lg overflow-hidden border border-gray-300 bg-gray-50">
@@ -56,15 +56,15 @@ function Projects() {
 
               {/* Project Content */}
               <div className="md:w-1/2 flex flex-col justify-center">
-                <h3 className="text-2xl font-semibold text-black mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold text-black mb-3 md:mb-4">
                   {project.name}
                 </h3>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed mb-4 md:mb-6">
                   {project.description}
                 </p>
                 
                 {/* Buttons */}
-                <div className="flex gap-3">
+                <div className="flex flex-wrap gap-3">
                   <button 
                     onClick={() => window.open(project.liveLink, '_blank')}
                     className="bg-black text-white rounded-lg px-6 py-2.5 font-medium text-sm inline-flex items-center gap-2 hover:bg-gray-800 transition-colors"

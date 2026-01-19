@@ -1,15 +1,15 @@
 function TravelGallery() {
   return (
-    <section className="w-[70%] mx-auto py-16 pb-32">
-      <h2 className="text-[28px] md:text-[36px] lg:text-[40px] font-bold mb-4">Beyond the Code</h2>
-      <p className="font-sans text-[18px] font-normal text-black leading-[1.6] mb-12 w-[60%]">
+    <section className="w-full px-6 md:w-[85%] lg:w-[70%] mx-auto py-12 md:py-16 pb-24 md:pb-32">
+      <h2 className="text-[24px] md:text-[32px] lg:text-[40px] font-bold mb-3 md:mb-4">Beyond the Code</h2>
+      <p className="font-sans text-[16px] md:text-[18px] font-normal text-black leading-[1.6] mb-8 md:mb-12 w-full md:w-[80%] lg:w-[60%]">
         Outside of regular development work, I enjoy participating in hackathons, staying active through exploring new places all of which keep me curious and energized for collaborative problem-solving.
       </p>
       
       {/* Masonry Grid Collage */}
-      <div className="grid grid-cols-3 gap-4 auto-rows-[200px]">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 auto-rows-[150px] md:auto-rows-[200px]">
         {/* Image 1 - Tall */}
-        <div className="row-span-2 rounded-3xl overflow-hidden bg-gray-100">
+        <div className="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100">
           <img 
             src="/about/img1.jpeg" 
             alt="Travel"
@@ -18,7 +18,7 @@ function TravelGallery() {
         </div>
 
         {/* Image 2 - Normal */}
-        <div className="rounded-3xl overflow-hidden bg-gray-100">
+        <div className="rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100">
           <video 
             src="/about/img5.mp4" 
             alt="Travel"
@@ -31,7 +31,7 @@ function TravelGallery() {
         </div>
 
         {/* Image 3 - Tall */}
-        <div className="row-span-2 rounded-3xl overflow-hidden bg-gray-100">
+        <div className="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100">
           <img 
             src="/about/img3.jpeg" 
             alt="Travel"
@@ -40,7 +40,7 @@ function TravelGallery() {
         </div>
 
         {/* Image 4 - Tall */}
-        <div className="row-span-2 rounded-3xl overflow-hidden bg-gray-100">
+        <div className="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100">
           <img 
             src="/about/guitar.jpeg" 
             alt="Travel"
@@ -49,7 +49,7 @@ function TravelGallery() {
         </div>
 
         {/* Image 5 - Normal */}
-        <div className="rounded-3xl overflow-hidden bg-gray-100">
+        <div className="rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100">
           <img 
             src="/about/img5.jpeg" 
             alt="Travel"
@@ -58,7 +58,7 @@ function TravelGallery() {
         </div>
 
         {/* Image 6 - Tall */}
-        <div className="row-span-2 rounded-3xl overflow-hidden bg-gray-100">
+        <div className="row-span-2 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100 hidden md:block">
           <img 
             src="/tech.png" 
             alt="Travel"
@@ -67,7 +67,7 @@ function TravelGallery() {
         </div>
 
         {/* Image 7 - Normal */}
-        <div className="rounded-3xl overflow-hidden bg-gray-100">
+        <div className="rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100 hidden md:block">
           <img 
             src="/about/img4.jpeg" 
             alt="Travel"
@@ -76,7 +76,7 @@ function TravelGallery() {
         </div>
 
         {/* Image 8 - Normal */}
-        <div className="rounded-3xl overflow-hidden bg-gray-100">
+        <div className="rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100 hidden md:block">
           <img 
             src="/about/Screenshot 2025-09-28 155933.png" 
             alt="Travel"
