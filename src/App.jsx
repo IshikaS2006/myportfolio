@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Hero from './sections/Hero'
@@ -10,11 +11,11 @@ import About from './pages/About'
 function App() {
   const [footerHeight, setFooterHeight] = useState(0)
   const [scrollProgress, setScrollProgress] = useState(0)
-  const [currentPage, setCurrentPage] = useState('home')
+  const location = useLocation()
   
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [currentPage]);
+  }, [location.pathname]);
   
   const footerRef = useRef(null)
   const mainRef = useRef(null)
@@ -67,17 +68,18 @@ function App() {
         }}
         className="relative z-10 bg-white rounded-b-[32px] shadow-2xl pb-16 transition-transform duration-200 ease-out"
       >
-        <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-        {currentPage === 'home' ? (
-          <>
-            <Hero />
-            <OpenSource />
-            <Projects />
-            <TechStack />
-          </>
-        ) : (
-          <About />
-        )}
+        <Navbar />
+        <Routes>
+          <Route path="/" element={
+            <>
+              <Hero />
+              <OpenSource />
+              <Projects />
+              <TechStack />
+            </>
+          } />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </main>
 
       {/* Fixed Footer - revealed as content scrolls */}
